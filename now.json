@@ -1,7 +1,19 @@
 {
-  "name": "Node.js Sample",
-  "description": "A barebones Node.js app using Express 4",
-  "repository": "https://github.com/heroku/node-js-sample",
-  "logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg",
-  "keywords": ["node", "express", "static"]
+  "name": "zeit-chat",
+  "version": 2,
+  "alias": ["my-domain.com", "my-alias"],
+  "scope": "my-team",
+   "build": {
+    "env": {
+      "MY_KEY": "this is the value",
+      "SECRET": "@my-secret-name"
+    }
+  },
+  "builds": [
+    { "src": "*.html", "use": "@now/static" },
+    { "src": "*.php", "use": "@now/php" },
+    { "src": "*.js", "use": "@now/node" }
+  ],
+  "public": true,
+  
 }
