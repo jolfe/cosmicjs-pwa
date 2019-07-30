@@ -2,10 +2,6 @@
   "version": 2,
   "name": "monorepo",
   "builds": [
-   { "src": "build/index.js", "use": "@now/node-server" }
- ],
-  "routes": [
-    { "src": "/build/(.*)", "dest": "/build/$1" },
-    { "src": "/(.*)", "dest": "/www/$1" }
-  ]
+   { "src": "/build/", "use": "@now/node" }
+ ]
 }
