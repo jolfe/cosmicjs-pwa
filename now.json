@@ -2,6 +2,6 @@
   "version": 2,
   "name": "monorepo",
   "builds": [
-   { "src": "/build/", "use": "@now/node" }
+   { "src": "src/index.js", "use": "@now/node" }
  ]
 }
