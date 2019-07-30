@@ -1,101 +1,39 @@
 {
-  "name": "deploy.now",
+  "name": "react-pwa",
+  "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "8.0.x"
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.2.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-html-parser": "^2.0.2",
+    "react-quill": "^1.3.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.3",
+    "reactstrap": "^7.0.2"
   },
   "scripts": {
-    "dev": "nodemon index.js -i components/ -i pages/",
-    "build": "next build",
-    "start": "NODE_ENV=production node index.js",
-    "test": "xo",
-    "precommit": "npm test -s"
+    "start": "node app.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "dependencies": {
-    "axios": "^0.15.2",
-    "body-parser": "^1.15.2",
-    "download-package-tarball": "^1.0.5",
-    "express": "^4.14.0",
-    "http-proxy-middleware": "^0.17.2",
-    "next": "^1.1.1",
-    "now": "^6.3.1",
-    "parse-github-url": "^0.3.2",
-    "react": "^15.5.4"
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "engines": {
+    "node": "8.12.0",
+    "npm": "6.4.1"
   },
-  "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "eslint-config-xo-react": "^0.10.0",
-    "eslint-plugin-react": "^6.7.1",
-    "husky": "^0.11.9",
-    "nodemon": "^1.11.0",
-    "xo": "^0.17.1"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "xo": {
-    "parser": "babel-eslint",
-    "extends": "xo-react",
-    "esnext": true,
-    "space": true,
-    "settings": {
-      "import/core-modules": [
-        "react"
-      ]
-    },
-    "rules": {
-      "no-warning-comments": "warn",
-      "space-infix-ops": 0,
-      "one-var": [
-        "error",
-        {
-          "uninitialized": "always",
-          "initialized": "never"
-        }
-      ],
-      "max-statements-per-line": [
-        "error",
-        {
-          "max": 2
-        }
-      ],
-      "brace-style": [
-        "error",
-        "1tbs",
-        {
-          "allowSingleLine": true
-        }
-      ],
-      "curly": [
-        "error",
-        "multi",
-        "consistent"
-      ],
-      "quote-props": [
-        "error",
-        "consistent"
-      ],
-      "arrow-parens": [
-        "error",
-        "always"
-      ],
-      "unicorn/catch-error-name": [
-        "error",
-        {
-          "name": "error"
-        }
-      ],
-      "unicorn/filename-case": 0,
-      "react/jsx-first-prop-new-line": 0,
-      "react/jsx-closing-bracket-location": 0,
-      "react/jsx-space-before-closing": [
-        "error",
-        "always"
-      ],
-      "react/jsx-no-bind": [
-        "error",
-        {
-          "ignoreRefs": true,
-          "allowArrowFunctions": true
-        }
-      ]
-    }
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
