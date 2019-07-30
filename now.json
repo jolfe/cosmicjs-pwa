@@ -2,9 +2,17 @@
   "version": 2,
   "name": "monorepo",
   "builds": [
-    { "src": "www/package.json", "use": "@now/static-build" },
-    { "src": "api/*.js", "use": "@now/node" }
-  ],
+    {
+      "src": "build/index.js",
+      "use": "@now/node",
+      "config": {
+        "includeFiles": [
+          "templates/**",
+          "views/**"
+        ]
+      }
+    }
+  ]
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/(.*)", "dest": "/www/$1" }
