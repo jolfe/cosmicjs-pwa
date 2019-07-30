@@ -1,19 +1,12 @@
 {
-  "name": "zeit-chat",
   "version": 2,
-  "alias": ["my-domain.com", "my-alias"],
-  "scope": "my-team",
-   "build": {
-    "env": {
-      "MY_KEY": "this is the value",
-      "SECRET": "@my-secret-name"
-    }
-  },
+  "name": "monorepo",
   "builds": [
-    { "src": "*.html", "use": "@now/static" },
-    { "src": "*.php", "use": "@now/php" },
-    { "src": "*.js", "use": "@now/node" }
+    { "src": "www/package.json", "use": "@now/static-build" },
+    { "src": "api/*.js", "use": "@now/node" }
   ],
-  "public": true,
-  
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/www/$1" }
+  ]
 }
