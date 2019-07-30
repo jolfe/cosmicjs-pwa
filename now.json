@@ -3,8 +3,9 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@now/next",
+      "use": "@now/static",
       "config": { "distDir": "build" }
     }
-  ]
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "build/$1" }]
 }
