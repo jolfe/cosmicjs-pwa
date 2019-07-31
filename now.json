@@ -2,11 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist",
+      "src": "dist/main.js",
       "use": "@now/static"
     }
-  ],
-  "routes": [
-        { "src": "/dist/(.\*)", "dest": "/dist/index.js" }
-    ]
+  ]
 }
