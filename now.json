@@ -2,9 +2,8 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/**",
-      "use": "@now/static",
-      "config": { "distDir": "build" }
+      "src": "build/",
+      "use": "@now/static"
     }  
   ]
 }
