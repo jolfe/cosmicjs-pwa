@@ -2,10 +2,9 @@
   "version": 2,
   "builds": [
     {
-      "src": "/build/",
-      "use": "@now/node",
+      "src": "/build/index.js",
+      "use": "@now/static",
       "config": { "distDir": "build" }
-    }
-  ],
-  "routes": [{ "src": "/(.*)", "dest": "build/$1" }]
+    }  
+  ]
 }
