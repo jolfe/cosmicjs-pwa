@@ -14,12 +14,11 @@
     "reactstrap": "^7.0.2"
   },
   "scripts": {
-    "start": "node app.js",
+    "deploy": "npm run build && now ./build --name=myapp-spa",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "now-build": "next build && next export -o dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "now-build"
   },
   "keywords": [
     "example",
