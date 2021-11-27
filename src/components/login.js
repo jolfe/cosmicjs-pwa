@@ -28,7 +28,7 @@ class login extends Component {
     // this.state.isLoading = "Please wait..";
     this.setState({ isLoading: "Please wait.." });
     authentication.login(this.state.email).then((result) => {
-      // console.log(result.data.message)
+      
       console.log(result.data.objects[0].metadata.email);
       if (result.data.message === "No objects returned.") {
         this.setState({ message: "Wrong credentials, try again!!" });
@@ -72,14 +72,9 @@ class login extends Component {
         </div>
         <div className="wrapper fadeInDown">
           <div id="formContent">
-            <h2 className="active">
-              <b> Admin Login </b>
+            <h2 className="">
+              <b> Login </b>
             </h2>
-
-            {/*     
-    <div className="fadeIn first">
-      <img src={adminImage}  className="rounded" id="icon" alt="Admin Icon" />
-    </div> */}
 
             <form onSubmit={this.onSubmit}>
               <input

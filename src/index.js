@@ -18,11 +18,12 @@ ReactDOM.render(<App />, document.getElementById("root"));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 const HeaderStyles = { backgroundColor: "orange" };
+
 ReactDOM.render(
   <Router>
-    <div className={`${HeaderStyles}`}>
-      <div>
-        <div className="">Jolfe PWA Project Azure</div>
+    <div className="header-styles">
+      <div className={`${HeaderStyles.backgroundColor}`}>
+        <h1 className="">Jolfe PWA Project Azure</h1>
       </div>
 
       <Route exact path="/" component={news} />
