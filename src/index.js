@@ -11,19 +11,18 @@ import "bootstrap/dist/css/bootstrap.css";
 import dashboard from "./components/dashboard";
 import addnews from "./components/addnews";
 import singlenews from "./components/singlenews";
-import styles from "./components/styles.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
-
+const HeaderStyles = { backgroundColor: "orange" };
 ReactDOM.render(
   <Router>
-    <div className="container">
+    <div className={`${HeaderStyles}`}>
       <div>
-        <div className="jumbotron center">Jolfe PWA Project Azure</div>
+        <div className="">Jolfe PWA Project Azure</div>
       </div>
 
       <Route exact path="/" component={news} />
